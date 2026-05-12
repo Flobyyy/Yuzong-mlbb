@@ -1,0 +1,228 @@
+:::writing
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yu Zhong</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,Arial;
+}
+
+body{
+background:#070000;
+color:#cfcfcf;
+overflow-x:hidden;
+}
+
+/* dragon aura background */
+
+body::before{
+content:"";
+position:fixed;
+width:200%;
+height:200%;
+background:
+radial-gradient(circle at 30% 40%,#5c0000,transparent),
+radial-gradient(circle at 70% 60%,#2b0000,transparent);
+opacity:0.35;
+animation:move 14s linear infinite;
+z-index:-1;
+}
+
+@keyframes move{
+0%{transform:translate(0,0)}
+50%{transform:translate(-6%,-4%)}
+100%{transform:translate(0,0)}
+}
+
+/* header */
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 60px;
+background:rgba(0,0,0,0.6);
+}
+
+nav a{
+color:#bdbdbd;
+text-decoration:none;
+margin-left:25px;
+font-size:15px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#ff2a2a;
+}
+
+/* buttons */
+
+.btn{
+padding:12px 30px;
+border-radius:25px;
+border:none;
+background:linear-gradient(90deg,#8b0000,#ff0000);
+color:white;
+cursor:pointer;
+font-weight:bold;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.08);
+box-shadow:0 0 20px #ff0000;
+}
+
+/* hero */
+
+.hero{
+height:95vh;
+background:url("yuzhong2.jpg") center/cover no-repeat;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px;
+}
+
+.hero h1{
+font-size:90px;
+color:#ff2a2a;
+text-shadow:0 0 25px #ff0000;
+margin-bottom:15px;
+letter-spacing:3px;
+}
+
+.hero p{
+max-width:600px;
+opacity:0.8;
+margin-bottom:25px;
+}
+
+/* section */
+
+.section{
+padding:100px 10%;
+}
+
+/* gallery */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:40px;
+align-items:center;
+}
+
+.gallery img{
+width:100%;
+border-radius:10px;
+opacity:0.85;
+transition:0.5s;
+}
+
+.gallery img:hover{
+opacity:1;
+transform:scale(1.03);
+}
+
+/* dragon animation */
+
+.dragon{
+position:absolute;
+top:120px;
+left:-200px;
+font-size:110px;
+opacity:0.15;
+animation:dragon 16s linear infinite;
+}
+
+@keyframes dragon{
+0%{transform:translateX(0)}
+100%{transform:translateX(120vw)}
+}
+
+/* text block */
+
+.lore{
+max-width:600px;
+line-height:1.6;
+font-size:15px;
+}
+
+/* footer */
+
+footer{
+text-align:center;
+padding:40px;
+font-size:14px;
+opacity:0.6;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div></div>
+
+<nav>
+<a href="#">Главная</a>
+<a href="#">История</a>
+<a href="#">Галерея</a>
+</nav>
+
+<button class="btn">Enter Battle</button>
+
+</header>
+
+<div class="dragon">🐉</div>
+
+<section class="hero">
+
+<h1>Yu Zhong</h1>
+
+<p>
+Black Dragon of Mobile Legends.  
+A warrior who consumes the power of enemies and transforms into a terrifying dragon on the battlefield.
+</p>
+
+<button class="btn">Dragon Power</button>
+
+</section>
+
+<section class="section">
+
+<div class="gallery">
+
+<img src="yuzhong1.jpg">
+
+<div class="lore">
+Yu Zhong is a powerful fighter known as the Black Dragon.  
+His abilities allow him to absorb the life force of enemies and dominate team fights.  
+When unleashed, his dragon form spreads chaos across the battlefield and overwhelms anyone who stands in his path.
+</div>
+
+</div>
+
+</section>
+
+<footer>
+Автор: Lelush Lamperush
+</footer>
+
+</body>
+</html>
+:::
